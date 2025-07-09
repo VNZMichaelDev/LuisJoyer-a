@@ -154,6 +154,7 @@ body {
   background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
   position: relative;
   overflow: hidden;
+  padding-top: 80px; /* Agregar padding para evitar que el navbar tape el contenido */
 }
 
 .hero::before {
@@ -338,6 +339,7 @@ body {
   height: 100%;
   object-fit: cover;
   transition: var(--transition);
+  border-radius: 20px; /* Bordes redondeados para la imagen hero */
 }
 
 .watch-badge {
@@ -429,12 +431,7 @@ body {
   line-height: 1.8;
 }
 
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
+/* Mejores animaciones para la sección About */
 .feature {
   display: flex;
   align-items: center;
@@ -442,18 +439,52 @@ body {
   padding: 1rem;
   background: var(--accent-color);
   border-radius: 10px;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.feature:hover::before {
+  left: 100%;
 }
 
 .feature:hover {
-  transform: translateX(10px);
-  box-shadow: var(--shadow);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+  background: linear-gradient(135deg, var(--accent-color), rgba(212, 175, 55, 0.05));
 }
 
 .feature i {
   color: var(--primary-color);
   font-size: 1.5rem;
   width: 30px;
+  transition: all 0.3s ease;
+}
+
+.feature:hover i {
+  transform: scale(1.2) rotate(5deg);
+  color: #b8941f;
+}
+
+.feature span {
+  transition: all 0.3s ease;
+}
+
+.feature:hover span {
+  color: var(--secondary-color);
+  font-weight: 600;
 }
 
 .about-stats {
@@ -462,6 +493,7 @@ body {
   gap: 2rem;
 }
 
+/* Mejorar animaciones de las estadísticas */
 .stat {
   text-align: center;
   padding: 2rem;
@@ -469,12 +501,34 @@ body {
   border-radius: 15px;
   color: var(--white);
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.stat:hover::before {
+  opacity: 1;
+  top: -100%;
+  left: -100%;
 }
 
 .stat:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
 }
 
 .stat-number {
@@ -482,6 +536,11 @@ body {
   font-size: 3rem;
   font-weight: 700;
   font-family: "Playfair Display", serif;
+  transition: all 0.3s ease;
+}
+
+.stat:hover .stat-number {
+  transform: scale(1.1);
 }
 
 .stat-label {
@@ -551,11 +610,13 @@ body {
   background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
 }
 
+/* Mejorar las imágenes de productos con bordes redondeados */
 .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition);
+  border-radius: 15px 15px 0 0; /* Solo bordes superiores redondeados */
 }
 
 .product-card:hover .product-image img {
@@ -913,22 +974,47 @@ body {
   overflow: hidden;
 }
 
+/* También mejorar el contenedor de la imagen del modal */
 .modal-image {
-  background: var(--accent-color);
+  background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   min-height: 400px;
+  position: relative;
 }
 
+.modal-image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Mejorar las imágenes del modal con bordes redondeados */
 .modal-image img {
   width: 100%;
   max-width: 300px;
   height: auto;
   max-height: 350px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.modal-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .modal-info {
