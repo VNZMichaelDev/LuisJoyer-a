@@ -154,7 +154,7 @@ body {
   background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
   position: relative;
   overflow: hidden;
-  padding-top: 80px; /* Agregar padding para evitar que el navbar tape el contenido */
+  padding-top: 120px; /* Aumentar de 80px a 120px */
 }
 
 .hero::before {
@@ -182,7 +182,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  min-height: 80vh;
+  min-height: 75vh; /* Reducir de 80vh a 75vh */
+  padding-top: 2rem; /* Agregar padding superior */
 }
 
 .hero-text {
@@ -357,19 +358,21 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px; /* Cambiar de 30px a 40px */
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
+  animation: bounce 2s infinite;
 }
 
 .scroll-arrow {
-  width: 30px;
-  height: 30px;
-  border-right: 2px solid var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
+  width: 35px; /* Aumentar de 30px a 35px */
+  height: 35px;
+  border-right: 3px solid var(--primary-color); /* Aumentar grosor */
+  border-bottom: 3px solid var(--primary-color);
   transform: rotate(45deg);
   animation: bounce 2s infinite;
+  opacity: 0.8;
 }
 
 /* About Section */
@@ -899,6 +902,83 @@ body {
   transform: translateY(-3px);
 }
 
+/* Footer */
+.footer {
+  background: #0a0a0a;
+  color: var(--white);
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
@@ -1005,11 +1085,12 @@ body {
   height: auto;
   max-height: 350px;
   object-fit: contain;
-  border-radius: 20px; /* Bordes redondeados */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+  border-radius: 25px; /* Aumentar de 20px a 25px para más redondez */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+  border: 3px solid rgba(212, 175, 55, 0.1); /* Agregar borde sutil dorado */
 }
 
 .modal-image img:hover {
@@ -1586,5 +1667,20 @@ body {
   .watch-glow {
     width: 350px;
     height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 0 50px; /* Aumentar padding superior */
+  }
+
+  .hero-content {
+    min-height: 70vh;
+    padding-top: 1rem;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
   }
 }
