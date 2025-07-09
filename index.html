@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Joyería Colombia - Relojes de Lujo y Alta Calidad</title>
+    <meta name="description" content="Descubre la mejor colección de relojes de lujo en Colombia. Luis Joyería ofrece relojes G-FRC y TechnoMarine con garantía y envío nacional.">
+    <meta name="keywords" content="relojes Colombia, joyería Bogotá, relojes lujo, G-FRC, TechnoMarine, relojes automáticos">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="images/logo-escudo.jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo-escudo.jpg" alt="Luis Joyería Colombia" class="logo-img">
+                <span>Luis Joyería</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre" class="nav-link">Nosotros</a></li>
+                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="cta-button" onclick="scrollToSection('catalogo')">Ver Catálogo</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">La Joyería Con La</span>
+                        <span class="title-line highlight">Más Alta Calidad</span>
+                        <span class="title-line">En Relojes</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Descubre nuestra exclusiva colección de relojes G-FRC y TechnoMarine en Colombia. 
+                        Cada pieza representa la perfecta combinación entre elegancia, precisión y 
+                        artesanía excepcional con garantía nacional.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('catalogo')">
+                            <span>Ver Catálogo</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn-secondary" onclick="contactWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Envío Nacional</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía Oficial</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Pago Seguro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="watch-container">
+                        <div class="watch-glow"></div>
+                        <div class="featured-watch">
+                            <img src="images/6.jpg" alt="Reloj G-FRC Automático Bicolor" class="hero-watch-img">
+                            <div class="watch-badge">Destacado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p class="section-subtitle">Más de 15 años llevando elegancia y precisión a Colombia</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Tradición y Excelencia en Colombia</h3>
+                    <p>En Luis Joyería, nos especializamos en ofrecer relojes de las marcas más prestigiosas como G-FRC y TechnoMarine. Nuestra pasión por la relojería y el compromiso con la excelencia nos han convertido en la referencia de confianza para quienes buscan piezas únicas en todo el territorio colombiano.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <span>Productos Originales</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío a Toda Colombia</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <span>Servicio Postventa</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <span>Atención Personalizada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="1200">0</span>
+                        <span class="stat-label">Clientes Satisfechos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="32">0</span>
+                        <span class="stat-label">Departamentos Atendidos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalogo" class="catalog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Catálogo</h2>
+                <p class="section-subtitle">Descubre nuestra exclusiva colección de relojes G-FRC y TechnoMarine</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="gfrc">G-FRC</button>
+                <button class="filter-btn" data-filter="technomarine">TechnoMarine</button>
+                <button class="filter-btn" data-filter="automatico">Automáticos</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Los productos se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">Visítanos o contáctanos para conocer nuestros relojes</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Nuestra Ubicación</h4>
+                            <p>Cl.47b Sur #1378</p>
+                            <p>Bogotá, Colombia</p>
+                            <small>Envíos a todo el país</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+57 312 216 1186</p>
+                            <small>Respuesta inmediata</small>
+                            <button class="btn-primary btn-small" onclick="contactWhatsApp()" style="margin-top: 10px;">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Escribir Ahora</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>luisjoyeriacontacto@gmail.com</p>
+                            <small>Consultas y cotizaciones</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horarios de Atención</h4>
+                            <p>Lunes - Sábado</p>
+                            <p>9:00 AM - 6:00 PM</p>
+                            <small>Domingos cerrado</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa -->
+                <div class="contact-map">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8267!2d-74.0758!3d4.5981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3b1c1c1c1c%3A0x1c1c1c1c1c1c1c1c!2sCl.%2047b%20Sur%20%231378%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1234567890123!5m2!1ses!2sco"
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="map-info">
+                        <h3>¿Cómo llegar?</h3>
+                        <p>Estamos ubicados en el sur de Bogotá, en una zona de fácil acceso con transporte público y parqueadero disponible.</p>
+                        <div class="map-features">
+                            <div class="map-feature">
+                                <i class="fas fa-car"></i>
+                                <span>Parqueadero disponible</span>
+                            </div>
+                            <div class="map-feature">
+                                <i class="fas fa-bus"></i>
+                                <span>Transporte público cercano</span>
+                            </div>
+                            <div class="map-feature">
+                                <i class="fas fa-wheelchair"></i>
+                                <span>Acceso para personas con discapacidad</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary" onclick="window.open('https://maps.google.com/?q=Cl.47b+Sur+1378+Bogotá+Colombia', '_blank')">
+                            <i class="fas fa-directions"></i>
+                            <span>Ver Direcciones</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-escudo.jpg" alt="Luis Joyería Colombia" class="logo-img">
+                        <span>Luis Joyería</span>
+                    </div>
+                    <p>La excelencia en joyería desde 2009. Especialistas en relojes G-FRC y TechnoMarine con cobertura nacional en Colombia.</p>
+                    <div class="social-links">
+    <a href="https://www.tiktok.com/@luisjoyeria01?_t=ZS-8xsBBiTMEj9&_r=1" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://wa.me/573122161186" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre">Nosotros</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#catalogo">Relojes G-FRC</a></li>
+                        <li><a href="#catalogo">Relojes TechnoMarine</a></li>
+                        <li><a href="#catalogo">Automáticos</a></li>
+                        <li><a href="#catalogo">Deportivos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +57 312 216 1186</li>
+                        <li><i class="fas fa-envelope"></i> luisjoyeriacontacto@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Cl.47b Sur #1378, Bogotá</li>
+                        <li><i class="fas fa-clock"></i> Lun-Sáb: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luis Joyería Colombia. Todos los derechos reservados.</p>
+                <p>Relojes originales con garantía oficial</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="/placeholder.svg" alt="">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title"></h3>
+                    <p class="modal-price" id="modal-price"></p>
+                    <p class="modal-description" id="modal-description"></p>
+                    <div class="modal-features" id="modal-features"></div>
+                    <div class="modal-buttons">
+                        <button class="btn-primary" onclick="contactWhatsAppProduct()">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Consultar por WhatsApp</span>
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-heart"></i>
+                            <span>Agregar a Favoritos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
